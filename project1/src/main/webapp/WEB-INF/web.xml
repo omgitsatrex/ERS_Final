@@ -29,7 +29,13 @@
 
   <servlet>
     <servlet-name>ManagerServlet</servlet-name>
-    <servlet-class>/ManagerServlet</servlet-class>
+    <servlet-class>ManagerServlet</servlet-class>
   </servlet>
+
+
+  <servlet-mapping>
+    <servlet-name>ManagerServlet</servlet-name>
+    <url-pattern>/ManagerServlet</url-pattern>
+  </servlet-mapping>
 
 </web-app>
