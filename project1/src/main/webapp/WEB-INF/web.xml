@@ -27,4 +27,9 @@
     <url-pattern>/LogoutServlet</url-pattern>
   </servlet-mapping>
 
+  <servlet>
+    <servlet-name>ManagerServlet</servlet-name>
+    <servlet-class>/ManagerServlet</servlet-class>
+  </servlet>
+
 </web-app>
