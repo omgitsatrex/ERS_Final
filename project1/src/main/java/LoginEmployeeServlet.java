@@ -21,7 +21,7 @@ public class LoginEmployeeServlet extends HttpServlet {
 
         request.getRequestDispatcher("navbar.html").include(request,response);
         //when user enters correct details
-        if(username.equals("username") && password.equals("password")) {
+        if(username.equals("wfuentes1") && password.equals("Brotherhood")) {
             out.print("<br>You are successfully logged in");
             out.println("<br>Welcome " + username);
 

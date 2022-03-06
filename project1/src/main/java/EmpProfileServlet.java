@@ -23,7 +23,7 @@ public class EmpProfileServlet extends HttpServlet {
 
             }else{
                 out.println("please do the login page and login first");
-                request.getRequestDispatcher("/login").include(request,response);
+                request.getRequestDispatcher("/Login").include(request,response);
             }
             out.close();
         }

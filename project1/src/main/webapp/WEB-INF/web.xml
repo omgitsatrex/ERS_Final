@@ -38,4 +38,16 @@
     <url-pattern>/ManagerServlet</url-pattern>
   </servlet-mapping>
 
+
+  <servlet>
+    <servlet-name>EmpProfileServlet</servlet-name>
+    <servlet-class>EmpProfileServlet</servlet-class>
+  </servlet>
+
+
+  <servlet-mapping>
+    <servlet-name>EmpProfileServlet</servlet-name>
+    <url-pattern>/EmpProfileServlet</url-pattern>
+  </servlet-mapping>
+
 </web-app>
