@@ -31,11 +31,10 @@ public class LoginEmployeeServlet extends HttpServlet {
             session.setAttribute("pass",password);
 
 
-
         }else{
             out.println("<br>Sorry! invalid details");
             // out.println("Sorry invalid username and password");
-            RequestDispatcher requestDispatcher=request.getRequestDispatcher("/login.html");
+            RequestDispatcher requestDispatcher=request.getRequestDispatcher("/Login.html");
             requestDispatcher.include(request,response);
         }
         out.close();
