@@ -34,12 +34,12 @@ public class ManagerLogin extends HttpServlet {
 
         Session session = factory.openSession();
 
-        List <Manager> list = session.createQuery("from Manager", Manager.class).list();
+        List <Manager> list = session.createQuery("from Manager", Manager.class).list(); //where username='"+username+"' and password='"+password+"';
 
 //        out.println(list.toString()); // getting [Employee@20243220]
 
-        for(Manager e:list){
-            out.println( "<br>" + e.toString());
+        for(Manager m:list){
+            out.println( "<br>" + m.toString());
         }
         out.println("<br>test2");
     }
