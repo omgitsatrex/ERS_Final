@@ -38,7 +38,7 @@ public class AddReimburse extends HttpServlet {
         session.persist(re);
         t.commit();
         session.close();
-        request.getRequestDispatcher(".html").include(request, response);
+        request.getRequestDispatcher("AddReimburse.html").include(request, response);
         out.println("<h2> "+ re.getName()+ " "+ re.getAmount()+" added</h2>");
 
 

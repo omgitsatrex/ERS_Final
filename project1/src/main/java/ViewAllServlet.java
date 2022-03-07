@@ -23,7 +23,8 @@ public class ViewAllServlet  extends HttpServlet {
                 "<tr>\n " +
                 "<th>Id</th>\n " +
                 "<th>Name</th>\n " +
-                "<th>password</th>\n " +
+                "<th>Amount</th>\n " +
+                "<th>Status</th>\n " +
                 "</tr>\n ");
 
 
@@ -39,15 +40,16 @@ public class ViewAllServlet  extends HttpServlet {
         // ope the session
         Session session = factory.openSession();
         Transaction t= session.beginTransaction();
-        List<Employee> list=session.createQuery("from Employee", Employee.class).list();
+        List<Reimburse> list=session.createQuery("from Reimburse", Reimburse.class).list();
 
         Iterator itr=list.iterator();
 
         while(itr.hasNext()){
-            Employee e=(Employee)itr.next();
-            out.println("<td>"+e.getId()+"</td>");
-            out.println("<td>"+e.getName()+"</td>");
-            out.println("<td>"+e.getPassword()+"</td>");
+            Reimburse r=(Reimburse)itr.next();
+            out.println("<td>"+r.getId()+"</td>");
+            out.println("<td>"+r.getName()+"</td>");
+            out.println("<td>"+r.getAmount()+"</td>");
+            out.println("<td>"+r.getStatus()+"</td></tr>");
 
         }
 
