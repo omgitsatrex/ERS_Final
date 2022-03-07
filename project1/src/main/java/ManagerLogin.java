@@ -22,6 +22,7 @@ public class ManagerLogin extends HttpServlet {
 //        int id = Integer.parseInt(request.getParameter("id"));
         String username = request.getParameter("username");
         String password = request.getParameter("password");
+        System.out.println(username);
 
 //        Manager manager = new Manager();//(id, username, password);
 //        manager.setUsername(username);
@@ -34,7 +35,7 @@ public class ManagerLogin extends HttpServlet {
         SessionFactory factory = config.buildSessionFactory();
 
         Session session = factory.openSession();
-        Transaction t= session.beginTransaction();
+        //Transaction t= session.beginTransaction();
         List <Manager> list = session.createQuery("from Manager", Manager.class).list(); //where username='"+username+"' and password='"+password+"';
 
 //        out.println(list.toString()); // getting [Employee@20243220]
@@ -44,7 +45,7 @@ public class ManagerLogin extends HttpServlet {
             out.println( "<br>" + m.toString());
         }
         out.println("<br>test2");
-        t.commit();
+       // t.commit();
         session.close();
     }
 }
