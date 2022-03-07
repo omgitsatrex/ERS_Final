@@ -40,6 +40,7 @@ public class ManagerLogin extends HttpServlet {
 //        out.println(list.toString()); // getting [Employee@20243220]
 
         for(Manager m:list){
+            out.println("testInsideLoop");
             out.println( "<br>" + m.toString());
         }
         out.println("<br>test2");
