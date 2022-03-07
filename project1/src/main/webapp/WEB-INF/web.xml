@@ -65,4 +65,14 @@
     <url-pattern>/ManagerLogin</url-pattern>
   </servlet-mapping>
 
+
+  <servlet>
+    <servlet-name>AddReimburse</servlet-name>
+    <servlet-class>AddReimburse</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>AddReimburse</servlet-name>
+    <url-pattern>/AddReimburse</url-pattern>
+  </servlet-mapping>
 </web-app>

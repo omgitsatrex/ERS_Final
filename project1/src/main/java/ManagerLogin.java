@@ -4,6 +4,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
 import java.io.IOException;
@@ -33,7 +34,7 @@ public class ManagerLogin extends HttpServlet {
         SessionFactory factory = config.buildSessionFactory();
 
         Session session = factory.openSession();
-
+        Transaction t= session.beginTransaction();
         List <Manager> list = session.createQuery("from Manager", Manager.class).list(); //where username='"+username+"' and password='"+password+"';
 
 //        out.println(list.toString()); // getting [Employee@20243220]
@@ -42,5 +43,7 @@ public class ManagerLogin extends HttpServlet {
             out.println( "<br>" + m.toString());
         }
         out.println("<br>test2");
+        t.commit();
+        session.close();
     }
 }

@@ -1,15 +1,26 @@
-public class Manager {
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+
+@Entity
+public class Employee {
+    @Id
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
     private int id;
+
     private String username;
     private String password;
 
-    public Manager() {
-    }
 
-    public Manager(int id, String username, String password) {
+    public Employee(){}
+
+    public Employee(int id, String username, String password) {
         this.id = id;
         this.username = username;
         this.password = password;
+
     }
 
     public int getId() {
@@ -20,11 +31,11 @@ public class Manager {
         this.id = id;
     }
 
-    public String getUsername() {
+    public String getName() {
         return username;
     }
 
-    public void setUsername(String username) {
+    public void setName(String username) {
         this.username = username;
     }
 
@@ -36,11 +47,12 @@ public class Manager {
         this.password = password;
     }
 
+
     @Override
     public String toString() {
-        return "Manager{" +
+        return "Employee{" +
                 "id=" + id +
-                ", username='" + username + '\'' +
+                ", name='" + username + '\'' +
                 ", password='" + password + '\'' +
                 '}';
     }
