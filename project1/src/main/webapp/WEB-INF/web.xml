@@ -27,15 +27,42 @@
     <url-pattern>/LogoutServlet</url-pattern>
   </servlet-mapping>
 
+
+
   <servlet>
-    <servlet-name>ManagerServlet</servlet-name>
-    <servlet-class>ManagerServlet</servlet-class>
+    <servlet-name>EmpProfileServlet</servlet-name>
+    <servlet-class>EmpProfileServlet</servlet-class>
   </servlet>
 
 
   <servlet-mapping>
-    <servlet-name>ManagerServlet</servlet-name>
-    <url-pattern>/ManagerServlet</url-pattern>
+    <servlet-name>EmpProfileServlet</servlet-name>
+    <url-pattern>/EmpProfileServlet</url-pattern>
+  </servlet-mapping>
+
+
+
+<servlet>
+  <servlet-name>ManProfileServlet</servlet-name>
+  <servlet-class>ManProfileServlet</servlet-class>
+</servlet>
+
+
+<servlet-mapping>
+<servlet-name>ManProfileServlet</servlet-name>
+<url-pattern>/ManProfileServlet</url-pattern>
+</servlet-mapping>
+
+
+  <servlet>
+    <servlet-name>ManagerLogin</servlet-name>
+    <servlet-class>ManagerLogin</servlet-class>
+  </servlet>
+
+
+  <servlet-mapping>
+    <servlet-name>ManagerLogin</servlet-name>
+    <url-pattern>/ManagerLogin</url-pattern>
   </servlet-mapping>
 
 </web-app>
