@@ -20,7 +20,8 @@ public class AddReimburse extends HttpServlet {
         Reimburse re = new Reimburse();
         re.setName(request.getParameter("username"));
         re.setAmount(Integer.valueOf(request.getParameter("amount")));
-        re.setStatus(request.getParameter("status"));
+        //re.setStatus(request.getParameter("status"));
+        re.setStatus("pending");
 
 
         Configuration config = new Configuration();
@@ -38,8 +39,8 @@ public class AddReimburse extends HttpServlet {
         session.persist(re);
         t.commit();
         session.close();
-        request.getRequestDispatcher("AddReimburse.html").include(request, response);
-        out.println("<h2> "+ re.getName()+ " "+ re.getAmount()+" added</h2>");
+        request.getRequestDispatcher("EmpProfile.html").include(request, response);
+        out.println("<h2> Request of "+ re.getName()+" added</h2>");
 
 
 
