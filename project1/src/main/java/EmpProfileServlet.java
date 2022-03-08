@@ -19,6 +19,7 @@ public class EmpProfileServlet extends HttpServlet {
         if(session!=null){
             String username= (String)session.getAttribute("uname");
             if(!username.equals("") || username!=null){
+
                 out.println("<h1>Welcome "+ username+" </h1>");
 
             }else{

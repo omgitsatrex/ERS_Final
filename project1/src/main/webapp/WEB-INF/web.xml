@@ -86,4 +86,16 @@
     <servlet-name>ViewAllServlet</servlet-name>
     <url-pattern>/ViewAllServlet</url-pattern>
   </servlet-mapping>
+
+
+  <servlet>
+    <servlet-name>ViewPending</servlet-name>
+    <servlet-class>ViewPending</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>ViewPending</servlet-name>
+    <url-pattern>/ViewPending</url-pattern>
+  </servlet-mapping>
+
 </web-app>
