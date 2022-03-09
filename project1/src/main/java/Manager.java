@@ -1,4 +1,9 @@
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
 public class Manager {
+    @Id
     private int id;
     private String username;
     private String password;
