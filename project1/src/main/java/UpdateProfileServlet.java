@@ -18,6 +18,7 @@ public class UpdateProfileServlet  extends HttpServlet {
 
         HttpSession ses= request.getSession(false);
         String username= (String)ses.getAttribute("uname");
+       // String id= (String) ses.getAttribute("id");
 
 
 
@@ -31,10 +32,10 @@ public class UpdateProfileServlet  extends HttpServlet {
         // ope the session
         Session session = factory.openSession();
         Transaction t= session.beginTransaction();
-
+        int id=Integer.parseInt(request.getParameter("id"));
         String email=request.getParameter("email");
 
-        Employee emp= session.find(Employee.class,username);
+        Employee emp= session.find(Employee.class,id);
         emp.setEmail(email);
         session.update(emp);
         request.getRequestDispatcher("EmpProfile.html").include(request, response);

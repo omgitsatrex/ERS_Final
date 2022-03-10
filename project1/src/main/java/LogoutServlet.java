@@ -13,7 +13,7 @@ public class LogoutServlet extends HttpServlet {
 
         HttpSession session=request.getSession(false);
         session.invalidate();
-        out.println("<br>you are logged out successfully \n"+
+        out.println("<h1><br>You have logged out successfully </h1>\n"+
                 "<br>");
 
         RequestDispatcher requestDispatcher=request.getRequestDispatcher("/index.html");

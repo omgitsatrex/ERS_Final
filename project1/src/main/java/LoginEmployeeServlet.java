@@ -31,6 +31,7 @@ public class LoginEmployeeServlet extends HttpServlet {
 
         String username=request.getParameter("username");
         String password=request.getParameter("password");
+
     String query="FROM Employee where username='"+username+"' and password='"+password+"'";
         List<Employee> list=session.createQuery(query, Employee.class).list();
         String user="";
@@ -91,12 +92,26 @@ public class LoginEmployeeServlet extends HttpServlet {
                             "}\n" +
                             "li a:hover {\n" +
                             "  background-color: #111;\n" +
-                            "}"+
+                            "}\n" +
+                    ".btn{\n" +
+                    " background-color: navy;\n" +
+                    "  border: none;\n" +
+                    "  color: white;\n" +
+                    "  padding: 15px 32px;\n" +
+                    "  text-align: center;\n" +
+                    "  text-decoration: none;\n" +
+                    "  display: inline-block;\n" +
+                    "  font-size: 16px;\n" +
+                    "  margin: 4px 2px;\n" +
+                    "  cursor: pointer;\n" +
+                    "}\n"+
                     "    </style>\n" +
                     "</head>\n" +
                     "<body>\n" +
-                        " <a href=\"ViewEmp\">View Profile Info</a>\n" +
-                    "    <a href=\"UpdateProfile.html\">Update Profile Info</a>\n" +
+                        " <a href=\"ViewEmp\"/>\n " +
+                    "<button class=\"btn\">View Profile Info</button>" +
+                    "    <a href=\"UpdateProfile.html\"/>\n " +
+                    "<button class=\"btn\">Update Profile Info</button>" +
                     "</div>\n" +
                     "\n" +
                     "</body>\n" +
@@ -104,7 +119,6 @@ public class LoginEmployeeServlet extends HttpServlet {
 
             HttpSession ses= request.getSession(true);
             ses.setAttribute("uname",username);
-            ses.setAttribute("pass",password);
 
 
 

@@ -2,47 +2,62 @@
 <html lang=\en\>
 <head>
     <meta charset=\UTF-8\>
-       <title>Title</title>
-       <style>
-             body{
-               background-color:grey;
-                 }
-                div{
-                        width: 200px;
-                          height: 200px;
-                           display:inline-block;
-                   }
-                       ul {
-                              list-style-type: none;
-                              margin: 0;
-                              padding: 0;
-                              overflow: hidden;
-                              background-color: #333;
-                            }
-                            li a{
-                            display: block;
-                              color: white;
-                              text-align: left;
-                              padding: 14px 16px;
-                              text-decoration: none;
-                             float:left;
-                            }
-                            li a:hover {
-                              background-color: #111;
-                            }
-      </style>
-    </head>
+    <title>Title</title>
+    <style>
+body{
+ background-color:grey;
+}
+div{
+  width: 200px;
+ height: 200px;
+  display:inline-block;
+        }
+ ul {
+   list-style-type: none;
+       margin: 0;
+ padding: 0;
+overflow: hidden;
+      background-color: #333;
+    }
+    li a{
+     display: block;
+  color: white;
+    text-align: left;
+   padding: 14px 16px;
+      text-decoration: none;
+      float:left;
+        }
+ li a:hover {
+    background-color: #111;
+     }
+    .btn{
+ background-color: navy;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+    </style>
+</head>
 <body>
 <ul>
-    <li> <a href="LogoutServlet">Logout</a></li>
+    <li><a href="LogoutServlet">Logout</a></li>
     <li><a href="AddReimbursement.html">Add Reimbursement</a></li>
     <li><a href="ViewPendingEmp">ViewPending</a></li>
     <li><a href="ViewResolvedEmp">ViewResolved</a></li>
     <li><a href="ViewAllEmp">View All Request</a></li>
     <li><a href="Update.html">Update</a></li>
 </ul>
- <a href="ViewEmp">View Profile Info</a>
-    <a href="UpdateProfile.html">Update Profile Info</a>
+<a href="ViewEmp"/>
+<button class="btn">View Profile Info</button>
+<a href="UpdateProfile.html"/>
+<button class="btn">Update Profile Info</button>
 </div>
 
 </body>
