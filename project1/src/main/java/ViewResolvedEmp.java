@@ -7,7 +7,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
-
+import reimburse.Reimburse;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Iterator;
@@ -41,7 +41,7 @@ public class ViewResolvedEmp  extends HttpServlet {
         // ope the session
         Session session = factory.openSession();
         Transaction t= session.beginTransaction();
-        String HQL="from Reimburse where status='resolved' and username= '"+username+"'";
+        String HQL="from Reimburse where status='approved' and username= '"+username+"'";
         List<Reimburse> list=session.createQuery(HQL, Reimburse.class).list();
 
         Iterator itr=list.iterator();

@@ -26,7 +26,7 @@ public class ViewEmp extends HttpServlet {
                 "</tr>\n ");
 
 
-        request.getRequestDispatcher("mannavbar.html").include(request,response);
+        request.getRequestDispatcher("manNavbar.html").include(request,response);
 
         Configuration config = new Configuration();
 

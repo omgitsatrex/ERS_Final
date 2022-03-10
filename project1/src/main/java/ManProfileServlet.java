@@ -10,22 +10,27 @@ import java.io.PrintWriter;
 public class ManProfileServlet extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         response.setContentType("text/html");
-        PrintWriter out=response.getWriter();
+        PrintWriter out = response.getWriter();
 
-        request.getRequestDispatcher("navbar.html").include(request,response);
-
-        HttpSession session= request.getSession(false);
+        HttpSession session = request.getSession(false);
         if(session!=null){
-            String username= (String)session.getAttribute("uname");
-            if(!username.equals("") || username!=null){
-                out.println("<h1>Welcome "+ username+" </h1>");
-
-            }else{
+            String username = (String) session.getAttribute("username");
+            if(!username.equals("") && username!=null){
+                request.getRequestDispatcher("manNavbar.html").include(request, response);
+                out.println("<h1>Welcome to profile</h1>");
+                out.println("<h1> Welcome "+username+"</h1>");
+            }
+            else{
                 out.println("please do the login page and login first");
-                request.getRequestDispatcher("/ManagerLogin.html").include(request,response);
+                request.getRequestDispatcher("/manLogin.html").include(request,response);
             }
             out.close();
         }
+        else{
+            out.println("<br>please do the login page and login first");
+            request.getRequestDispatcher("/manLogin.html").include(request,response);
+        }
+        out.close();
 
     }
 }

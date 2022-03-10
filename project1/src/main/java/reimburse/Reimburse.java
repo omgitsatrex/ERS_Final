@@ -1,4 +1,9 @@
-import jakarta.persistence.*;
+package reimburse;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
 @Entity
 public class Reimburse {
@@ -15,10 +20,11 @@ public class Reimburse {
 
     public Reimburse(){}
 
-    public Reimburse(int id, String username, String status) {
+    public Reimburse(int id, String username,Integer amount, String status) {
         this.id = id;
         this.username = username;
         this.status = status;
+        this.amount = amount;
 
     }
 

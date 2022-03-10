@@ -12,14 +12,15 @@ public class Employee {
 
     private String username;
     private String password;
-
+    private String email;
 
     public Employee(){}
 
-    public Employee(int id, String username, String password) {
+    public Employee(int id, String username, String password, String email) {
         this.id = id;
         this.username = username;
         this.password = password;
+        this.email=email;
 
     }
 
@@ -47,13 +48,21 @@ public class Employee {
         this.password = password;
     }
 
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
     @Override
     public String toString() {
         return "Employee{" +
                 "id=" + id +
-                ", name='" + username + '\'' +
+                ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
+                ", email='" + email + '\'' +
                 '}';
     }
 }

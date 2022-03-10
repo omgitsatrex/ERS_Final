@@ -29,31 +29,6 @@
 
 
 
-
-<servlet>
-  <servlet-name>ManProfileServlet</servlet-name>
-  <servlet-class>ManProfileServlet</servlet-class>
-</servlet>
-
-
-<servlet-mapping>
-<servlet-name>ManProfileServlet</servlet-name>
-<url-pattern>/ManProfileServlet</url-pattern>
-</servlet-mapping>
-
-
-  <servlet>
-    <servlet-name>ManagerLogin</servlet-name>
-    <servlet-class>ManagerLogin</servlet-class>
-  </servlet>
-
-
-  <servlet-mapping>
-    <servlet-name>ManagerLogin</servlet-name>
-    <url-pattern>/ManagerLogin</url-pattern>
-  </servlet-mapping>
-
-
   <servlet>
     <servlet-name>AddReimburse</servlet-name>
     <servlet-class>AddReimburse</servlet-class>
@@ -121,6 +96,68 @@
     <url-pattern>/ViewResolvedEmp</url-pattern>
   </servlet-mapping>
 
+
+
+
+  <servlet>
+    <servlet-name>ManLoginServlet</servlet-name>
+    <servlet-class>ManLoginServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>ManLoginServlet</servlet-name>
+    <url-pattern>/ManLoginServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>ManProfileServlet</servlet-name>
+    <servlet-class>ManProfileServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>ManProfileServlet</servlet-name>
+    <url-pattern>/ManProfileServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>ManApproveServlet</servlet-name>
+    <servlet-class>ManApproveServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>ManApproveServlet</servlet-name>
+    <url-pattern>/ManApproveServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>ManRejectServlet</servlet-name>
+    <servlet-class>ManRejectServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>ManRejectServlet</servlet-name>
+    <url-pattern>/ManRejectServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>ManViewPendingServlet</servlet-name>
+    <servlet-class>ManViewPendingServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>ManViewPendingServlet</servlet-name>
+    <url-pattern>/ManViewPendingServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>ManViewApprovedServlet</servlet-name>
+    <servlet-class>ManViewApprovedServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>ManViewApprovedServlet</servlet-name>
+    <url-pattern>/ManViewApprovedServlet</url-pattern>
+  </servlet-mapping>
 
 
 

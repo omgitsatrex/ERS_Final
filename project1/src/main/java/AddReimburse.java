@@ -7,7 +7,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
-
+import reimburse.Reimburse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
@@ -16,7 +16,7 @@ public class AddReimburse extends HttpServlet {
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
 
-        request.getRequestDispatcher("empnavbar.html").include(request,response);
+        //request.getRequestDispatcher("empnavbar.html").include(request,response);
         HttpSession ses= request.getSession(false);
         String username= (String)ses.getAttribute("uname");
         Reimburse re = new Reimburse();

@@ -6,12 +6,12 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
-
+import reimburse.Reimburse;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Iterator;
 import java.util.List;
-
+//this is for manager
 public class ViewAllServlet  extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         response.setContentType("text/html");
@@ -28,7 +28,7 @@ public class ViewAllServlet  extends HttpServlet {
                 "</tr>\n ");
 
 
-        request.getRequestDispatcher("navbar.html").include(request,response);
+        //request.getRequestDispatcher("empnavbar.html").include(request,response);
 
         Configuration config = new Configuration();
 

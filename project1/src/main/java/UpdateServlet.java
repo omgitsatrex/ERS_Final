@@ -1,4 +1,3 @@
-import jakarta.persistence.Query;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
@@ -7,11 +6,9 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
-
+import reimburse.Reimburse;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.Iterator;
-import java.util.List;
 
 public class UpdateServlet  extends HttpServlet {
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
@@ -20,7 +17,7 @@ public class UpdateServlet  extends HttpServlet {
 
 
 
-        request.getRequestDispatcher("empnavbar.html").include(request,response);
+
 
         Configuration config = new Configuration();
 
@@ -38,8 +35,8 @@ public class UpdateServlet  extends HttpServlet {
         Reimburse re= session.find(Reimburse.class,id);
         re.setAmount(amount);
         session.update(re);
-
-       out.println("Id: " +id+" has been updated.");
+        request.getRequestDispatcher("EmpProfile.html").include(request, response);
+       out.println("<br> <h1>Id: " +id+" has been updated.</h1>");
         t.commit();
         session.close();
     }
