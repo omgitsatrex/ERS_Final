@@ -3,13 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+    body{
+    background: grey;
+    }
+    .container{
+    background-color: #fff;
+    width: 200px;
+    height: 200px;
+    padding: 40px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 10px;
+    box-shadow: 5px 10px ;
+    }
+    .btn{
+    width: 50%;
+    padding: 5px;
+    background-color: rgb(13, 64, 131);
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    border-radius: 4px;
+    }
+    </style>
 </head>
 <body>
 <a href="index.html">Go back</a> |
+<div class="container">
 <form action="ManLoginServlet" method="post">
     <p>Username : <input type="text" name="username"></p>
     <p>Password : <input type="password" name="password"></p>
-    <input type="submit" value="Login">
+    <input class="btn" type="submit" value="Login">
 </form>
+</div>
 </body>
 </html>

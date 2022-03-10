@@ -97,6 +97,17 @@
   </servlet-mapping>
 
 
+  <servlet>
+    <servlet-name>UpdateProfileServlet</servlet-name>
+    <servlet-class>UpdateProfileServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>UpdateProfileServlet</servlet-name>
+    <url-pattern>/UpdateProfileServlet</url-pattern>
+  </servlet-mapping>
+
+
 
 
   <servlet>

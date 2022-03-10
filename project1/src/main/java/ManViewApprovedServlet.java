@@ -17,7 +17,7 @@ public class ManViewApprovedServlet extends HttpServlet {
         ReimburseDao reimburseDao = ReimburseDaoFactory.getReimburseDao();
         List<Reimburse> list = reimburseDao.getReimbursesByApproved();
 
-        out.println("<a href=\"/RevatureProject_1\">Go back</a> |");
+        out.println("<a href=\"ManProfileServlet\">Go back</a> |");
 
         out.println("<table border=1>" +
                 "<tr>" +

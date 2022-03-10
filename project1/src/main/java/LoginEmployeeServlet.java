@@ -51,7 +51,12 @@ public class LoginEmployeeServlet extends HttpServlet {
         if(user.equals(request.getParameter("username")) && pass.equals(request.getParameter("password")) ){
             out.println(" <ul>\n" +
                     "  <li> <a href=\"LogoutServlet\">Logout</a></li>\n" +
-                    " </ul>\n");
+                    "<li><a href=\"AddReimbursement.html\">Add Reimbursement</a></li>\n" +
+                    "<li><a href=\"ViewPendingEmp\">ViewPending</a></li>\n"+
+                    "<li><a href=\"ViewResolvedEmp\">ViewResolved</a></li>\n"+
+                    "<li><a href=\"ViewAllEmp\">View All Request</a></li>\n" +
+                    "<li><a href=\"Update.html\">Update</a></li>\n" +
+            " </ul>\n");
             out.print("<br>You are successfully logged in");
             out.println("<br><h1>Welcome to " + username + " Profile</h1>");
             out.println("<!DOCTYPE html>\n" +
@@ -82,6 +87,7 @@ public class LoginEmployeeServlet extends HttpServlet {
                             "  text-align: left;\n" +
                             "  padding: 14px 16px;\n" +
                             "  text-decoration: none;\n" +
+                            " float:left;\n"+
                             "}\n" +
                             "li a:hover {\n" +
                             "  background-color: #111;\n" +
@@ -89,26 +95,8 @@ public class LoginEmployeeServlet extends HttpServlet {
                     "    </style>\n" +
                     "</head>\n" +
                     "<body>\n" +
-                    "<!--create divs or links to show each request below-->\n" +
-                    "<div class=\"add\">\n" +
-                    "<a href=\"AddReimbursement.html\">Add Reimbursement</a>\n" +
-                    "</div>\n" +
-                    "\n" +
-                    "<div class=\"pending\">\n" +
-                    "    <a href=\"ViewPendingEmp\">View Pending</a>\n" +
-                    "</div>\n" +
-                    "\n" +
-                    "\n" +
-                    "<div class=\"view resolve request\">\n" +
-                    "<a href=\"ViewResolvedEmp\">View Resolved</a>\n" +
-                    "</div>\n" +
-                    "\n" +
-                    "<div>\n" +
-                    "    <a href=\"ViewAllEmp\">View All Request</a>\n" +
-                    "</div>\n" +
-                    "\n" +
-                    "<div>\n" +
-                    "    <a href=\"Update.html\">Update</a>\n" +
+
+                    "    <a href=\"UpdateProfile.html\">UpdateProfile</a>\n" +
                     "</div>\n" +
                     "\n" +
                     "</body>\n" +

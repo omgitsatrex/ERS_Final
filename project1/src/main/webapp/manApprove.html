@@ -3,15 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+    body{
+    background: grey;
+    }
+    .container{
+    background-color: #fff;
+    width: 200px;
+    height: 200px;
+    padding: 40px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 10px;
+    box-shadow: 5px 10px ;
+    }
+    .btn{
+    width: 50%;
+    padding: 5px;
+    background-color: rgb(13, 64, 131);
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    border-radius: 4px;
+    }
+    </style>
 </head>
 <body>
 <a href="ManProfileServlet">Profile</a> |
-<!--<a href="manApprove.html">Approve a reimbursement</a> |-->
-<!--<a href="manReject.html">Reject a reimbursement</a> |-->
-<!--<a href="LogoutServlet">Logout</a> <br>-->
+<div class="container">
 <form action="ManApproveServlet" method="post">
     Reimbursement ID : <input type="text" name="id">
-    <input type="submit" value="Approve">
+    <input class= "btn" type="submit" value="Approve">
 </form>
+</div>
 </body>
 </html>

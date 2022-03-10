@@ -17,7 +17,7 @@ public class ManViewPendingServlet extends HttpServlet {
         ReimburseDao reimburseDao = ReimburseDaoFactory.getReimburseDao();
         List<Reimburse> list = reimburseDao.getReimbursesByPending();
 
-        out.println("<a href=\"/RevatureProject_1\">Go back</a> |");
+        out.println("<a href=\"ManProfileServlet\">Go back</a> |");
 
         out.println("<table border=1>" +
                 "<tr>" +

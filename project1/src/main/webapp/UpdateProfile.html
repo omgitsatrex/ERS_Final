@@ -23,23 +23,20 @@
     background-color: rgb(13, 64, 131);
     border: none;
     color: #fff;
-    font-size: 16px;
+    font-size: 10px;
     text-transform: uppercase;
-    border-radius: 4px;
+    border-radius: 5px;
     }
     </style>
 </head>
 <body>
-
-<a href="ManProfileServlet">Profile</a> |
-<!--<a href="manApprove.html">Approve a reimbursement</a> |-->
-<!--<a href="manReject.html">Reject a reimbursement</a> |-->
-<!--<a href="LogoutServlet">Logout</a> <br>-->
+<h1>Please enter updated email information</h1>
 <div class="container">
-<form action="ManRejectServlet" method="post">
-    Reimbursement ID : <input type="text" name="id">
-    <input class="btn" type="submit" value="Reject">
-</form>
+    <form action="UpdateProfileServlet" method="post">
+        <p>Email:</b></br><input type="text" name="email" placeholder="Enter updated email"></p>
+        <input class="btn" type="submit" value="Submit">
+
+    </form>
 </div>
 </body>
 </html>
