@@ -13,7 +13,7 @@ import java.io.PrintWriter;
 import java.util.Iterator;
 import java.util.List;
 
-public class ViewPending  extends HttpServlet {
+public class ViewAllEmp  extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         response.setContentType("text/html");
         PrintWriter out=response.getWriter();
@@ -32,6 +32,7 @@ public class ViewPending  extends HttpServlet {
         request.getRequestDispatcher("empnavbar.html").include(request,response);
         HttpSession ses= request.getSession(false);
         String username= (String)ses.getAttribute("uname");
+
         Configuration config = new Configuration();
 
         // read the Configuration and load in the object
@@ -42,7 +43,7 @@ public class ViewPending  extends HttpServlet {
         // ope the session
         Session session = factory.openSession();
         Transaction t= session.beginTransaction();
-        String HQL="from Reimburse where status='pending' and username= '"+username+"' ";
+        String HQL="from Reimburse where username= '"+username+"' ";
         List<Reimburse> list=session.createQuery(HQL, Reimburse.class).list();
 
         Iterator itr=list.iterator();
@@ -62,5 +63,4 @@ public class ViewPending  extends HttpServlet {
         session.close();
     }
 }
-
 

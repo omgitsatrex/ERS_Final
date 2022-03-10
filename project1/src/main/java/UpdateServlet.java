@@ -1,8 +1,8 @@
+import jakarta.persistence.Query;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import jakarta.servlet.http.HttpSession;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -10,21 +10,17 @@ import org.hibernate.cfg.Configuration;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Iterator;
+import java.util.List;
 
-public class AddReimburse extends HttpServlet {
+public class UpdateServlet  extends HttpServlet {
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         response.setContentType("text/html");
-        PrintWriter out = response.getWriter();
+        PrintWriter out=response.getWriter();
+
+
 
         request.getRequestDispatcher("empnavbar.html").include(request,response);
-        HttpSession ses= request.getSession(false);
-        String username= (String)ses.getAttribute("uname");
-        Reimburse re = new Reimburse();
-        re.setName(username);
-        re.setAmount(Integer.valueOf(request.getParameter("amount")));
-
-        re.setStatus("pending");
-
 
         Configuration config = new Configuration();
 
@@ -35,20 +31,24 @@ public class AddReimburse extends HttpServlet {
         SessionFactory factory = config.buildSessionFactory();
         // ope the session
         Session session = factory.openSession();
-        // begin transaction
-        Transaction t = session.beginTransaction() ;
+        Transaction t= session.beginTransaction();
+        int id= Integer.parseInt(request.getParameter("id"));
+        int amount= Integer.parseInt(request.getParameter("amount"));
 
-        session.persist(re);
+        Reimburse re= session.find(Reimburse.class,id);
+        re.setAmount(amount);
+        session.update(re);
+
+       out.println("Id: " +id+" has been updated.");
         t.commit();
         session.close();
-        request.getRequestDispatcher("EmpProfile.html").include(request, response);
-        out.println("<h2> Request of "+ re.getName()+" added</h2>");
+    }
 
 
+    public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        response.setContentType("text/html");
+        PrintWriter out=response.getWriter();
 
-
-
+        request.getRequestDispatcher("Update.html").include(request,response);
     }
 }
-
-

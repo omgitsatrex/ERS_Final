@@ -3,31 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+    body{
+    background-color:grey;
+    }
+    div{
+             width: 200px;
+            height: 200px;
+
+            display:inline-block;
+            }
+    </style>
 </head>
 <body>
+
+<a href="LogoutServlet">Logout</a>
 <h1>Employee Profile</h1>
 
 <!--create divs or links to show each request below-->
-<div class="make request">
+<div class="add">
 <a href="AddReimbursement.html">Add Reimbursement</a>
 </div>
 
-
-
 <div class="pending">
-    <a href="ViewPending">View Pending</a>
+    <a href="ViewPendingEmp">View Pending</a>
 </div>
 
 
-<div class="view resolve request"></div>
+<div class="view resolve request">
+<a href="ViewResolvedEmp">View Resolved</a>
+</div>
 
 <div>
   <h5>View all request</h5>
-    <a href="ViewAllServlet">View All Request</a>
+    <a href="ViewAllEmp">View All Request</a>
 </div>
 
 <div>
   <h5>Update request</h5>
+    <a href="Update.html">Update</a>
 </div>
 
 </body>

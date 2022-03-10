@@ -12,14 +12,13 @@ public class EmpProfileServlet extends HttpServlet {
         response.setContentType("text/html");
         PrintWriter out=response.getWriter();
 
-        request.getRequestDispatcher("navbar.html").include(request,response);
+        request.getRequestDispatcher("empnavbar.html").include(request,response);
 
         //Cookie[] cookies=request.getCookies();
         HttpSession session= request.getSession(false);
         if(session!=null){
             String username= (String)session.getAttribute("uname");
-            if(!username.equals("") || username!=null){
-
+            if(!username.equals("")){
                 out.println("<h1>Welcome "+ username+" </h1>");
 
             }else{

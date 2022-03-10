@@ -77,25 +77,52 @@
   </servlet-mapping>
 
 
+
+
   <servlet>
-    <servlet-name>ViewAllServlet</servlet-name>
-    <servlet-class>ViewAllServlet</servlet-class>
+    <servlet-name>UpdateServlet</servlet-name>
+    <servlet-class>UpdateServlet</servlet-class>
   </servlet>
 
   <servlet-mapping>
-    <servlet-name>ViewAllServlet</servlet-name>
-    <url-pattern>/ViewAllServlet</url-pattern>
+    <servlet-name>UpdateServlet</servlet-name>
+    <url-pattern>/UpdateServlet</url-pattern>
+  </servlet-mapping>
+
+
+
+  <servlet>
+    <servlet-name>ViewEmp</servlet-name>
+    <servlet-class>ViewEmp</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>ViewEmp</servlet-name>
+    <url-pattern>/ViewEmp</url-pattern>
   </servlet-mapping>
 
 
   <servlet>
-    <servlet-name>ViewPending</servlet-name>
-    <servlet-class>ViewPending</servlet-class>
+    <servlet-name>ViewAllEmp</servlet-name>
+    <servlet-class>ViewAllEmp</servlet-class>
   </servlet>
 
   <servlet-mapping>
-    <servlet-name>ViewPending</servlet-name>
-    <url-pattern>/ViewPending</url-pattern>
+    <servlet-name>ViewAllEmp</servlet-name>
+    <url-pattern>/ViewAllEmp</url-pattern>
   </servlet-mapping>
+
+  <servlet>
+    <servlet-name>ViewPendingEmp</servlet-name>
+    <servlet-class>ViewPendingEmp</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>ViewPendingEmp</servlet-name>
+    <url-pattern>/ViewPendingEmp</url-pattern>
+  </servlet-mapping>
+
+
+
 
 </web-app>

@@ -2,7 +2,6 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import jakarta.servlet.http.HttpSession;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -13,7 +12,7 @@ import java.io.PrintWriter;
 import java.util.Iterator;
 import java.util.List;
 
-public class ViewPending  extends HttpServlet {
+public class ViewResolved  extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         response.setContentType("text/html");
         PrintWriter out=response.getWriter();
@@ -23,15 +22,13 @@ public class ViewPending  extends HttpServlet {
                 "<table id=\"table\" border=\"1\">\n" +
                 "<tr>\n " +
                 "<th>Id</th>\n " +
-                "<th>Name</th>\n " +
                 "<th>Amount</th>\n " +
                 "<th>Status</th>\n " +
                 "</tr>\n ");
 
 
         request.getRequestDispatcher("empnavbar.html").include(request,response);
-        HttpSession ses= request.getSession(false);
-        String username= (String)ses.getAttribute("uname");
+
         Configuration config = new Configuration();
 
         // read the Configuration and load in the object
@@ -42,7 +39,7 @@ public class ViewPending  extends HttpServlet {
         // ope the session
         Session session = factory.openSession();
         Transaction t= session.beginTransaction();
-        String HQL="from Reimburse where status='pending' and username= '"+username+"' ";
+        String HQL="from Reimburse where status='resolved'";
         List<Reimburse> list=session.createQuery(HQL, Reimburse.class).list();
 
         Iterator itr=list.iterator();
@@ -50,7 +47,6 @@ public class ViewPending  extends HttpServlet {
         while(itr.hasNext()){
             Reimburse r=(Reimburse)itr.next();
             out.println("<td>"+r.getId()+"</td>");
-            out.println("<td>"+r.getName()+"</td>");
             out.println("<td>"+r.getAmount()+"</td>");
             out.println("<td>"+r.getStatus()+"</td></tr>");
 
@@ -62,5 +58,3 @@ public class ViewPending  extends HttpServlet {
         session.close();
     }
 }
-
-

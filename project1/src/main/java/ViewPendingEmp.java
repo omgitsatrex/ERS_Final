@@ -13,7 +13,7 @@ import java.io.PrintWriter;
 import java.util.Iterator;
 import java.util.List;
 
-public class ViewPending  extends HttpServlet {
+public class ViewPendingEmp extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         response.setContentType("text/html");
         PrintWriter out=response.getWriter();
@@ -62,5 +62,3 @@ public class ViewPending  extends HttpServlet {
         session.close();
     }
 }
-
-
