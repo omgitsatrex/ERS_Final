@@ -3,14 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <title>Add Reimbursement</title>
+    <style>
+    body{
+    background: grey;
+    }
+    .container{
+    background-color: #fff;
+    width: 200px;
+    height: 200px;
+    padding: 40px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 10px;
+    box-shadow: 5px 10px ;
+    }
+    .btn{
+    width: 50%;
+    padding: 5px;
+    background-color: rgb(13, 64, 131);
+    border: none;
+    color: #fff;
+    font-size: 10px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    }
+    </style>
 </head>
 <body>
 <div class="container">
     <form action="AddReimburse" method="post">
-<!--        <p>Username: <input type="text" name="username" placeholder="Enter Username"></p>-->
-        <p>Amount: <input type="text" name="amount" placeholder="Enter Amount"></p>
+<p><b>Enter amount to be reimburse</b></p>
+        <p><b>Amount: </b><input type="text" name="amount" placeholder="Enter Amount"></p>
         <input class="btn" type="submit" value="Submit">
+        <input class="btn" type="submit" value="Cancel" href="LoginEmployeeServlet">
     </form>
-
+</div>
 </body>
 </html>

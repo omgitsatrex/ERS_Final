@@ -2,6 +2,7 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -26,7 +27,8 @@ public class ViewResolvedEmp  extends HttpServlet {
                 "<th>Status</th>\n " +
                 "</tr>\n ");
 
-
+        HttpSession ses= request.getSession(false);
+        String username= (String)ses.getAttribute("uname");
         request.getRequestDispatcher("empnavbar.html").include(request,response);
 
         Configuration config = new Configuration();
@@ -39,7 +41,7 @@ public class ViewResolvedEmp  extends HttpServlet {
         // ope the session
         Session session = factory.openSession();
         Transaction t= session.beginTransaction();
-        String HQL="from Reimburse where status='resolved'";
+        String HQL="from Reimburse where status='resolved' and username= '"+username+"'";
         List<Reimburse> list=session.createQuery(HQL, Reimburse.class).list();
 
         Iterator itr=list.iterator();

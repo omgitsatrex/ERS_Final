@@ -10,10 +10,12 @@ public class LogoutServlet extends HttpServlet {
         response.setContentType("text/html");
         PrintWriter out=response.getWriter();
 
-        request.getRequestDispatcher("empnavbar.html").include(request, response);
+
         HttpSession session=request.getSession(false);
         session.invalidate();
-        out.println("<br>you are logged out successfully");
+        out.println("<br>you are logged out successfully \n"+
+                "<br>");
+
         RequestDispatcher requestDispatcher=request.getRequestDispatcher("/index.html");
         requestDispatcher.include(request,response);
     }

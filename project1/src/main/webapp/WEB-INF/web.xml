@@ -29,18 +29,6 @@
 
 
 
-  <servlet>
-    <servlet-name>EmpProfileServlet</servlet-name>
-    <servlet-class>EmpProfileServlet</servlet-class>
-  </servlet>
-
-
-  <servlet-mapping>
-    <servlet-name>EmpProfileServlet</servlet-name>
-    <url-pattern>/EmpProfileServlet</url-pattern>
-  </servlet-mapping>
-
-
 
 <servlet>
   <servlet-name>ManProfileServlet</servlet-name>
@@ -120,6 +108,17 @@
   <servlet-mapping>
     <servlet-name>ViewPendingEmp</servlet-name>
     <url-pattern>/ViewPendingEmp</url-pattern>
+  </servlet-mapping>
+
+
+  <servlet>
+    <servlet-name>ViewResolvedEmp</servlet-name>
+    <servlet-class>ViewResolvedEmp</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>ViewResolvedEmp</servlet-name>
+    <url-pattern>/ViewResolvedEmp</url-pattern>
   </servlet-mapping>
 
 

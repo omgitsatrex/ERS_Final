@@ -43,23 +43,83 @@ public class LoginEmployeeServlet extends HttpServlet {
         }
 //use with  HttpSession
 
-        request.getRequestDispatcher("empnavbar.html").include(request,response);
+        //request.getRequestDispatcher("empnavbar.html").include(request,response);
         //when user enters correct details
        // if(username.equals(list.) && password.equals("")) {
 
 
         if(user.equals(request.getParameter("username")) && pass.equals(request.getParameter("password")) ){
+            out.println(" <ul>\n" +
+                    "  <li> <a href=\"LogoutServlet\">Logout</a></li>\n" +
+                    " </ul>\n");
             out.print("<br>You are successfully logged in");
-            out.println("<br>Welcome " + username);
-
-
-
+            out.println("<br><h1>Welcome to " + username + " Profile</h1>");
+            out.println("<!DOCTYPE html>\n" +
+                    "<html lang=\"en\">\n" +
+                    "<head>\n" +
+                    "    <meta charset=\"UTF-8\">\n" +
+                    "    <title>Title</title>\n" +
+                    "    <style>\n" +
+                    "    body{\n" +
+                    "    background-color:grey;\n" +
+                    "    }\n" +
+                    "    div{\n" +
+                    "             width: 200px;\n" +
+                    "            height: 200px;\n" +
+                    "\n" +
+                    "            display:inline-block;\n" +
+                    "            }\n" +
+                    "   ul {\n" +
+                            "  list-style-type: none;\n" +
+                            "  margin: 0;\n" +
+                            "  padding: 0;\n" +
+                            "  overflow: hidden;\n" +
+                            "  background-color: #333;\n" +
+                            "}\n" +
+                            "li a{\n" +
+                            "display: block;\n" +
+                            "  color: white;\n" +
+                            "  text-align: left;\n" +
+                            "  padding: 14px 16px;\n" +
+                            "  text-decoration: none;\n" +
+                            "}\n" +
+                            "li a:hover {\n" +
+                            "  background-color: #111;\n" +
+                            "}"+
+                    "    </style>\n" +
+                    "</head>\n" +
+                    "<body>\n" +
+                    "<!--create divs or links to show each request below-->\n" +
+                    "<div class=\"add\">\n" +
+                    "<a href=\"AddReimbursement.html\">Add Reimbursement</a>\n" +
+                    "</div>\n" +
+                    "\n" +
+                    "<div class=\"pending\">\n" +
+                    "    <a href=\"ViewPendingEmp\">View Pending</a>\n" +
+                    "</div>\n" +
+                    "\n" +
+                    "\n" +
+                    "<div class=\"view resolve request\">\n" +
+                    "<a href=\"ViewResolvedEmp\">View Resolved</a>\n" +
+                    "</div>\n" +
+                    "\n" +
+                    "<div>\n" +
+                    "    <a href=\"ViewAllEmp\">View All Request</a>\n" +
+                    "</div>\n" +
+                    "\n" +
+                    "<div>\n" +
+                    "    <a href=\"Update.html\">Update</a>\n" +
+                    "</div>\n" +
+                    "\n" +
+                    "</body>\n" +
+                    "</html>");
 
             HttpSession ses= request.getSession(true);
-
-
             ses.setAttribute("uname",username);
             ses.setAttribute("pass",password);
+
+
+
 
 
 

@@ -21,6 +21,7 @@ public class EmpProfileServlet extends HttpServlet {
             if(!username.equals("")){
                 out.println("<h1>Welcome "+ username+" </h1>");
 
+
             }else{
                 out.println("please do the login page and login first");
                 request.getRequestDispatcher("/Login").include(request,response);
