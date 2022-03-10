@@ -95,8 +95,8 @@ public class LoginEmployeeServlet extends HttpServlet {
                     "    </style>\n" +
                     "</head>\n" +
                     "<body>\n" +
-
-                    "    <a href=\"UpdateProfile.html\">UpdateProfile</a>\n" +
+                        " <a href=\"ViewEmp\">View Profile Info</a>\n" +
+                    "    <a href=\"UpdateProfile.html\">Update Profile Info</a>\n" +
                     "</div>\n" +
                     "\n" +
                     "</body>\n" +

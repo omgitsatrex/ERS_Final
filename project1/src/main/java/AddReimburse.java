@@ -42,6 +42,7 @@ public class AddReimburse extends HttpServlet {
         t.commit();
         session.close();
         request.getRequestDispatcher("EmpProfile.html").include(request, response);
+        out.println("<h1> "+username+" Profile");
         out.println("<h2> Request of "+ re.getName()+" added</h2>");
 
 

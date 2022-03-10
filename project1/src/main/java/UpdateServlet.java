@@ -2,6 +2,7 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -16,7 +17,8 @@ public class UpdateServlet  extends HttpServlet {
         PrintWriter out=response.getWriter();
 
 
-
+        HttpSession ses= request.getSession(false);
+        String username= (String)ses.getAttribute("uname");
 
 
         Configuration config = new Configuration();
@@ -36,6 +38,7 @@ public class UpdateServlet  extends HttpServlet {
         re.setAmount(amount);
         session.update(re);
         request.getRequestDispatcher("EmpProfile.html").include(request, response);
+        out.println("<h1> "+username+" Profile");
        out.println("<br> <h1>Id: " +id+" has been updated.</h1>");
         t.commit();
         session.close();

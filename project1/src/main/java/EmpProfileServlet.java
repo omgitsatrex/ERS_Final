@@ -12,7 +12,7 @@ public class EmpProfileServlet extends HttpServlet {
         response.setContentType("text/html");
         PrintWriter out=response.getWriter();
 
-        request.getRequestDispatcher("empnavbar.html").include(request,response);
+        //request.getRequestDispatcher("empnavbar.html").include(request,response);
 
         //Cookie[] cookies=request.getCookies();
         HttpSession session= request.getSession(false);
