@@ -6,7 +6,6 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
-import reimburse.Reimburse;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Iterator;
@@ -22,13 +21,11 @@ public class ViewAllServlet  extends HttpServlet {
                 "<table id=\"table\" border=\"1\">\n" +
                 "<tr>\n " +
                 "<th>Id</th>\n " +
-                "<th>Name</th>\n " +
-                "<th>Amount</th>\n " +
-                "<th>Status</th>\n " +
+                "<th>Name</th>\n "+
                 "</tr>\n ");
 
 
-        //request.getRequestDispatcher("empnavbar.html").include(request,response);
+        //request.getRequestDispatcher("manNavbar.html").include(request,response);
 
         Configuration config = new Configuration();
 
@@ -40,16 +37,14 @@ public class ViewAllServlet  extends HttpServlet {
         // ope the session
         Session session = factory.openSession();
         Transaction t= session.beginTransaction();
-        List<Reimburse> list=session.createQuery("from Reimburse", Reimburse.class).list();
+        List<Employee> list=session.createQuery("from Employee", Employee.class).list();
 
         Iterator itr=list.iterator();
 
         while(itr.hasNext()){
-            Reimburse r=(Reimburse)itr.next();
-            out.println("<td>"+r.getId()+"</td>");
-            out.println("<td>"+r.getName()+"</td>");
-            out.println("<td>"+r.getAmount()+"</td>");
-            out.println("<td>"+r.getStatus()+"</td></tr>");
+            Employee emp=(Employee)itr.next();
+            out.println("<td>"+emp.getId()+"</td>");
+            out.println("<td>"+emp.getName()+"</td></tr>");
 
         }
 

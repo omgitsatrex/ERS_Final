@@ -172,4 +172,21 @@
 
 
 
+
+
+
+
+
+
+<servlet>
+  <servlet-name>ViewAllServlet</servlet-name>
+  <servlet-class>ViewAllServlet</servlet-class>
+</servlet>
+
+  <servlet-mapping>
+    <servlet-name>ViewAllServlet</servlet-name>
+    <url-pattern>/ViewAllServlet</url-pattern>
+  </servlet-mapping>
+
+
 </web-app>

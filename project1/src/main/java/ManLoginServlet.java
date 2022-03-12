@@ -62,6 +62,7 @@ public class ManLoginServlet extends HttpServlet {
                     "<li><a href=\"manReject.html\">Reject a reimbursement</a></li>\n"+
                     "<li><a href=\"ManViewPendingServlet\">View Pending reimbursements</a></li>\n" +
                     "<li><a href=\"ManViewApprovedServlet\">View Approved reimbursements</a></li>\n" +
+                    "<li><a href=\"ViewAllServlet\">View All Employees</a></li>\n"+
                     " </ul>\n");
             out.println("You are successfully logged in");
             out.println("<br>Welcome, " + manager.getUsername());
