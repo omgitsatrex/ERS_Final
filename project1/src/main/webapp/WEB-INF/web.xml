@@ -170,13 +170,15 @@
     <url-pattern>/ManViewApprovedServlet</url-pattern>
   </servlet-mapping>
 
+  <servlet>
+    <servlet-name>ManViewEmpServlet</servlet-name>
+    <servlet-class>ManViewEmpServlet</servlet-class>
+  </servlet>
 
-
-
-
-
-
-
+  <servlet-mapping>
+    <servlet-name>ManViewEmpServlet</servlet-name>
+    <url-pattern>/ManViewEmpServlet</url-pattern>
+  </servlet-mapping>
 
 <servlet>
   <servlet-name>ViewAllServlet</servlet-name>
