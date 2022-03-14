@@ -82,7 +82,7 @@ public class EmpProfileServlet extends HttpServlet {
                         "    <a href=\"UpdateProfile.html\"/>\n " +
                         "<button class=\"btn\">Update Profile Info</button>" +
                         "</div>\n" +
-                        "\n" +
+
                         "</body>\n" +
                         "</html>");
 

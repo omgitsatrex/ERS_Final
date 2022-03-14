@@ -37,9 +37,9 @@ public class UpdateServlet  extends HttpServlet {
         Reimburse re= session.find(Reimburse.class,id);
         re.setAmount(amount);
         session.update(re);
+        out.println("<h1>Id: " +id+" has been updated.</h1>");
         request.getRequestDispatcher("EmpProfile.html").include(request, response);
-        out.println("<h1> "+username+" Profile");
-       out.println("<br> <h1>Id: " +id+" has been updated.</h1>");
+
         t.commit();
         session.close();
     }
