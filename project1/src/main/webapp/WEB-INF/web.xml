@@ -27,7 +27,15 @@
     <url-pattern>/LogoutServlet</url-pattern>
   </servlet-mapping>
 
+<servlet>
+  <servlet-name>EmpProfileServlet</servlet-name>
+  <servlet-class>EmpProfileServlet</servlet-class>
+</servlet>
 
+  <servlet-mapping>
+    <servlet-name>EmpProfileServlet</servlet-name>
+    <url-pattern>/EmpProfileServlet</url-pattern>
+  </servlet-mapping>
 
   <servlet>
     <servlet-name>AddReimburse</servlet-name>
@@ -170,7 +178,15 @@
     <url-pattern>/ManViewApprovedServlet</url-pattern>
   </servlet-mapping>
 
+<!--<servlet>-->
+<!--  <servlet-name>ManViewEmpServlet</servlet-name>-->
+<!--  <servlet-class>ManViewEmpServlet</servlet-class>-->
+<!--</servlet>-->
 
+<!--  <servlet-mapping>-->
+<!--    <servlet-name>ManViewEmpServlet</servlet-name>-->
+<!--    <url-pattern>/ManViewEmpServlet</url-pattern>-->
+<!--  </servlet-mapping>-->
 
 
 
@@ -179,14 +195,14 @@
 
 
 <servlet>
-  <servlet-name>ViewAllServlet</servlet-name>
-  <servlet-class>ViewAllServlet</servlet-class>
+<servlet-name>ViewAllServlet</servlet-name>
+<servlet-class>ViewAllServlet</servlet-class>
 </servlet>
 
-  <servlet-mapping>
-    <servlet-name>ViewAllServlet</servlet-name>
-    <url-pattern>/ViewAllServlet</url-pattern>
-  </servlet-mapping>
+<servlet-mapping>
+<servlet-name>ViewAllServlet</servlet-name>
+<url-pattern>/ViewAllServlet</url-pattern>
+</servlet-mapping>-->
 
 
 </web-app>

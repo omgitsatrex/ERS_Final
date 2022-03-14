@@ -52,6 +52,7 @@ public class LoginEmployeeServlet extends HttpServlet {
         if(user.equals(request.getParameter("username")) && pass.equals(request.getParameter("password")) ){
             out.println(" <ul>\n" +
                     "  <li> <a href=\"LogoutServlet\">Logout</a></li>\n" +
+                    "<li><a href=\"EmpProfile.html\">Profile</a></li>\n" +
                     "<li><a href=\"AddReimbursement.html\">Add Reimbursement</a></li>\n" +
                     "<li><a href=\"ViewPendingEmp\">ViewPending</a></li>\n"+
                     "<li><a href=\"ViewResolvedEmp\">ViewResolved</a></li>\n"+
@@ -59,7 +60,7 @@ public class LoginEmployeeServlet extends HttpServlet {
                     "<li><a href=\"Update.html\">Update</a></li>\n" +
             " </ul>\n");
             out.print("<br>You are successfully logged in");
-            out.println("<br><h1>Welcome to " + username + " Profile</h1>");
+            out.println("<br><h1>Welcome to " + username + "</h1>");
             out.println("<!DOCTYPE html>\n" +
                     "<html lang=\"en\">\n" +
                     "<head>\n" +
@@ -108,11 +109,6 @@ public class LoginEmployeeServlet extends HttpServlet {
                     "    </style>\n" +
                     "</head>\n" +
                     "<body>\n" +
-                        " <a href=\"ViewEmp\"/>\n " +
-                    "<button class=\"btn\">View Profile Info</button>" +
-                    "    <a href=\"UpdateProfile.html\"/>\n " +
-                    "<button class=\"btn\">Update Profile Info</button>" +
-                    "</div>\n" +
                     "\n" +
                     "</body>\n" +
                     "</html>");

@@ -26,6 +26,7 @@ public class ManLoginServlet extends HttpServlet {
         if(manager!=null && manager.getPassword().equals(password)){
             //request.getRequestDispatcher("manNavbar.html").include(request, response);
 //            out.println("<a href='Servlet6'>Click Here</a>");
+
             out.println("    <style>\n" +
                     "    body{\n" +
                     "    background-color:grey;\n" +
