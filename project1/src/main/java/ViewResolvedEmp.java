@@ -23,6 +23,7 @@ public class ViewResolvedEmp  extends HttpServlet {
                 "<table id=\"table\" border=\"1\">\n" +
                 "<tr>\n " +
                 "<th>Id</th>\n " +
+                "<th>Name</th>"+
                 "<th>Amount</th>\n " +
                 "<th>Status</th>\n " +
                 "</tr>\n ");
@@ -49,6 +50,7 @@ public class ViewResolvedEmp  extends HttpServlet {
         while(itr.hasNext()){
             Reimburse r=(Reimburse)itr.next();
             out.println("<td>"+r.getId()+"</td>");
+            out.println("<td>"+r.getName()+"</td>");
             out.println("<td>"+r.getAmount()+"</td>");
             out.println("<td>"+r.getStatus()+"</td></tr>");
 

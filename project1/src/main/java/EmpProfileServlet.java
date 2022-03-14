@@ -28,7 +28,7 @@ public class EmpProfileServlet extends HttpServlet {
                         "<li><a href=\"ViewAllEmp\">View All Request</a></li>\n" +
                         "<li><a href=\"Update.html\">Update</a></li>\n" +
                         " </ul>\n");
-                out.println("<br><h1>Welcome to " + username + " Profile</h1>");
+                out.println("<br><h1>Welcome " + username + " Profile</h1>");
                 out.println("<!DOCTYPE html>\n" +
                         "<html lang=\"en\">\n" +
                         "<head>\n" +

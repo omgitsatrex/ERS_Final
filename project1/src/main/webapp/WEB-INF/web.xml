@@ -178,31 +178,31 @@
     <url-pattern>/ManViewApprovedServlet</url-pattern>
   </servlet-mapping>
 
-<!--<servlet>-->
-<!--  <servlet-name>ManViewEmpServlet</servlet-name>-->
-<!--  <servlet-class>ManViewEmpServlet</servlet-class>-->
-<!--</servlet>-->
-
-<!--  <servlet-mapping>-->
-<!--    <servlet-name>ManViewEmpServlet</servlet-name>-->
-<!--    <url-pattern>/ManViewEmpServlet</url-pattern>-->
-<!--  </servlet-mapping>-->
-
-
-
-
-
-
-
 <servlet>
-<servlet-name>ViewAllServlet</servlet-name>
-<servlet-class>ViewAllServlet</servlet-class>
+<servlet-name>ManViewEmpServlet</servlet-name>
+<servlet-class>ManViewEmpServlet</servlet-class>
 </servlet>
 
 <servlet-mapping>
-<servlet-name>ViewAllServlet</servlet-name>
-<url-pattern>/ViewAllServlet</url-pattern>
-</servlet-mapping>-->
+<servlet-name>ManViewEmpServlet</servlet-name>
+ <url-pattern>/ManViewEmpServlet</url-pattern>
+</servlet-mapping>
+
+
+
+
+
+
+
+<!--<servlet>-->
+<!--<servlet-name>ViewAllServlet</servlet-name>-->
+<!--<servlet-class>ViewAllServlet</servlet-class>-->
+<!--</servlet>-->
+
+<!--<servlet-mapping>-->
+<!--<servlet-name>ViewAllServlet</servlet-name>-->
+<!--<url-pattern>/ViewAllServlet</url-pattern>-->
+<!--</servlet-mapping>&ndash;&gt;-->
 
 
 </web-app>

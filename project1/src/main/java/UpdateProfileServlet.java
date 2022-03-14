@@ -38,8 +38,9 @@ public class UpdateProfileServlet  extends HttpServlet {
         Employee emp= session.find(Employee.class,id);
         emp.setEmail(email);
         session.update(emp);
+        out.println("<h1>User: "+username+" profile has been updated.</h1>");
         request.getRequestDispatcher("EmpProfile.html").include(request, response);
-        out.println("<br> <h1>User: "+username+" profile has been updated.</h1>");
+
         t.commit();
         session.close();
     }

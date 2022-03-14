@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0e5ced26-b85d-4ffe-a0cd-aa43791a3a12" name="Changes" comment="" />
+    <list default="true" id="0e5ced26-b85d-4ffe-a0cd-aa43791a3a12" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project1/src/main/java/EmpProfileServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/project1/src/main/java/EmpProfileServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project1/src/main/java/LoginEmployeeServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/project1/src/main/java/LoginEmployeeServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project1/src/main/java/ManProfileServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/project1/src/main/java/ManProfileServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project1/target/classes/EmpProfileServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/project1/target/classes/EmpProfileServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project1/target/classes/LoginEmployeeServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/project1/target/classes/LoginEmployeeServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project1/target/classes/ManProfileServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/project1/target/classes/ManProfileServlet.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

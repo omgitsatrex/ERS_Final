@@ -27,16 +27,15 @@ public class ManViewEmpServlet extends HttpServlet {
 
         Session session = factory.openSession();
 
-        List <Employee> list = session.createQuery("from Reimburse where status='pending'", Employee.class).list();
+        List <Employee> list = session.createQuery("from Employee", Employee.class).list();
 
         out.println("<a href=\"ManProfileServlet\">Go back</a> |");
 
         out.println("<table border=1>" +
                 "<tr>" +
                 "<th>Id</th>" +
-                "<th>Amount</th>" +
-                "<th>Status</th>" +
-                "<th>username</th>" +
+                "<th>Name</th>" +
+                "<th>Email</th>" +
                 "</tr>"
         );
 
