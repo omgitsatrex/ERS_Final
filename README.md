@@ -1,24 +1,32 @@
 # ERS
-Expense Reimbursement System
-Expense Reimbursement System (ERS) In this document, all requirements and required technologies pertaining the first full stack individual project of your training will be presented. All requirements are mandatory. The Expense Reimbursement System will manage the process of reimbursing employees for expenses incurred while on company time. All employees in the company can login and submit requests for reimbursement and view their past tickets and pending requests. Finance managers can log in and view all reimbursement requests and history for all employees in the company. Finance managers are authorized to approve and deny requests for expense reimbursement.
+The Expense Reimbursement System will manage the process of reimbursing employees for expenses incurred while on company time. All employees in the company can login and submit requests for reimbursement and view their past tickets and pending requests. Finance managers can log in and view all reimbursement requests and history for all employees in the company. Finance managers are authorized to approve and deny requests for expense reimbursement.
  
-Mandatory Requirements:
-An Employee can: 
-• Login. 
-• View the employee home page. 
-• Logout. 
-• Submit a reimbursement request. 
-• View their pending reimbursement requests. 
-• View their resolved reimbursement requests. 
-• View their information. 
-• Update their information. 
+# Technologies
+Hibernate
+JDBC
+HTML
+CSS
+Servlets
+Java
+JavaScript
+MySQL
 
-A Manager can: 
-• Login.
-• View the manager home page. 
-• Logout. 
-• Approve/Deny pending reimbursement requests. 
-• View all pending requests of all employees. 
-• View all resolved requests of all employees. 
-• View reimbursement requests of a specific employee. 
-• View all employees. 
+
+# Getting Started
+use git clone https://github.com/Wfuentes1/ERS.git to get project repo from command line
+![Screenshot (456)](https://user-images.githubusercontent.com/25331197/158901857-611b01ea-fdff-4962-b564-39d5aea5586a.png)
+
+open in IntelliJ IDEA 
+
+Add configuration tomcat 
+
+
+# Usage
+Make sure to have a resource directory in src diretory with a hibernate.config.xml file made with sql database information
+
+Login works when employee and manager table is already made and has id, username, and password columns filled with at least one entry.
+
+
+
+# Contributors
+Elliot Culbertson
