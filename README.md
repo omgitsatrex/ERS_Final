@@ -3,12 +3,20 @@ The Expense Reimbursement System will manage the process of reimbursing employee
  
 # Technologies
 *Hibernate
+
 *JDBC
+
 *HTML
+
+
 *CSS
+
 *Servlets
+
 *Java
+
 *JavaScript
+
 *MySQL
 
 
