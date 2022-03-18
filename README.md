@@ -49,6 +49,12 @@ Run program with tomcat and open localhost link
 Then choose either employee or manager login and sign in with username and password that is in the sql tables.
 ![Screenshot (470)](https://user-images.githubusercontent.com/25331197/158915019-5cdc5a94-597c-4d9a-ae55-36defb47f927.png)
 
+After login choose what yoy want to check from navbar
+![Screenshot (472)](https://user-images.githubusercontent.com/25331197/158915162-8d6de2cf-77f2-40d4-a10d-85a09382376e.png)
+
+
+When done you can click logout and stop running the program.
+
 
 # Contributors
 Elliot Culbertson
